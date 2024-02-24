@@ -1,0 +1,166 @@
+		@keyframes fadeIn {
+
+			from { opacity: 0; }
+			to { opacity: 1; }
+		}
+        @keyframes slideInFromLeft {
+            from {
+                transform: translateX(-100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0%);
+                opacity: 1;
+  }
+}
+.animate-me {
+    opacity: 0;
+    transition: opacity 1s ease-out;
+}
+.animate-me.visible {
+    opacity: 1;
+}
+
+		*{
+			list-style: none;
+			text-decoration: none;
+			border-collapse: collapse;
+			margin:0px;
+			padding:0px;
+			color:#000;
+			font-family: "Raleway", sans-serif;
+			font-optical-sizing: auto;
+			font-weight: <weight>;
+			font-style: normal;
+			
+		}
+
+		.intro_bg{
+			background-image: url("rsc/background-image.jpg");
+			background-size: cover;
+			background-position: center;
+			background-repeat: no-repeat;
+			width: 100%;
+			height: 1000px;
+			animation: fadeIn 2s ease-in-out;
+		}
+		.header{
+			display:flex;
+			width:1280px;
+			margin:auto;
+			
+		}
+		.nav{
+			display:flex;
+			line-height: 86px;
+			justify-content: flex-end;
+			width:calc(1280px - 300px);
+			animation: fadeIn 6s ease-in-out;
+
+			
+
+
+		}
+       .nav a {
+           color: #ffffff;
+           transition: color 0.3s;
+}
+       .nav a:hover {
+           
+           color: #000000;
+}
+
+		.nav > li{
+			margin-left:84px;
+		}
+		.nav > li > a{
+			color: #fff;
+
+		}
+		.values > li{
+			color: #fff;
+
+					
+		}
+
+		.values > .valuesimp{
+			display: flex;
+			line-height: 86px;
+			
+		}
+
+		.presentation{
+
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			margin: 0;
+			padding: 0;
+			animation: fadeIn  7s ease-in-out;
+
+	
+
+		}
+		.valuesimp > li{
+			margin-left: 5px;
+			color: #fff;
+        
+		
+		}
+        .priority{
+            max-width: 100%;
+            height: 608px;
+            background: #f1f2f3;
+    
+    
+}
+.img_assiduité{
+    background-image: url("rsc/Assiduité.jpg");
+    background-size: cover;
+    background-position: center;
+    width: 50%;
+    height: 608px;
+    animation: slideInFromLeft 6s ease-out forwards;
+}
+.test{
+    background: red;
+    
+}
+                
+@media screen and (max-width: 768px) {
+    .header,
+    .nav {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .nav > li {
+        margin-left: 0;
+        margin-top: 5px;
+    }
+
+
+    .header{
+        max-width: 100%;
+        margin: 0;
+    }
+
+    
+    .nav {
+        justify-content: center;
+    }
+
+    
+    .presentation {
+        justify-content: flex-end;
+        position: relative;
+    }
+    .values > li{
+        text-align: right;
+    }
+    .values > .valuesimp {
+        justify-content: flex-end;
+    }
+}
+
+
