@@ -1,0 +1,50 @@
+.aboutme{
+    width: 1280px;
+    height: 1280px;
+    background-color: rgb(240, 240, 240);
+    position: relative;
+    top: -590px;
+  
+  }
+  .showtabtletarea{
+    width: 1200px;
+    height: 900px;
+    background-color: black;
+    position: relative;
+    left: 40px;
+    top: 190px;
+    border-radius: 25px;
+  
+  }
+  .screen{
+    width: 1100px;
+    height: 800px;
+    background-color: black;
+    position: relative;
+    left: 50px;
+    top: 50px;
+    border-radius: 25px;
+    
+  
+  }
+  .slideshowImage {
+    display: none; /* 기본적으로 모든 슬라이드쇼 이미지 숨김 */
+    /* 필요한 추가 스타일링 (크기, 위치 조정 등) */
+  }
+  
+  /* 첫 번째 이미지만 보이도록 설정 */
+  .slideshowImage:first-of-type {
+    display: block;
+  }
+  
+  .loadingImgright {
+    float: right; /* 이미지 컨테이너를 오른쪽으로 배치 */
+    max-width: 50%; /* 컨테이너의 최대 너비를 설정 */
+  }
+  
+  .buttom{
+    position: relative;
+    top: 300px;
+    left: 600px;
+  }
+  

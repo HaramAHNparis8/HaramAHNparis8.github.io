@@ -1,0 +1,61 @@
+@keyframes fadeInAnimate {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  .fadeInAnimate {
+    animation-name: fadeInAnimate;
+    animation-duration: 1s; /* 애니메이션 지속 시간 */
+    animation-fill-mode: both; /* 애니메이션 시작 전과 끝 상태를 유지 */
+  }
+  .message-bubble:nth-child(1) {
+      animation-delay: 1s; /* 첫 번째 요소는 바로 시작 */
+    }
+    
+    .message-bubble:nth-child(2) {
+      animation-delay: 3s; 
+    }
+    
+    .message-bubble:nth-child(3) {
+      animation-delay: 4s; /* 세 번째 요소는 2초 후 시작 */
+    }
+  @keyframes slideInFromLeft {
+      0% {
+        transform: translateX(-5%);
+        opacity: 0; 
+      }
+      100% {
+        transform: translateX(0); 
+        opacity: 1; 
+      }
+    }
+    
+    .slide-in-left {
+      animation: slideInFromLeft 10s ease-out forwards; 
+    }
+  .animate-me {
+      opacity: 0;
+      transition: opacity 1s ease-out;
+  }
+  .animate-me.visible {
+      opacity: 1;
+  }
+  
+  @keyframes slideIn {
+    from {
+      transform: translateY(100vh); /* 화면 아래에서 시작 */
+      opacity: 0; /* 시작 시 투명도 0 */
+    }
+    to {
+      transform: translateY(0); /* 최종 위치로 이동 */
+      opacity: 1; /* 최종 투명도 1 */
+    }
+  }
+  
+  .animate {
+    animation: slideIn 1s ease-out forwards; /* 애니메이션 이름, 지속시간, 타이밍 함수, 실행 방식 */
+  }

@@ -1,0 +1,444 @@
+@font-face {
+    font-family: 'PT Sans';
+    font-style: normal;
+    font-weight: 400;
+    src: local('PT Sans'), local('PTSans-Regular'), url('rsc/PT_Sans/PTSans-Regular.ttf') format('truetype');
+  }
+  
+  @font-face {
+    font-family: 'PT Sans';
+    font-style: italic;
+    font-weight: 400;
+    src: local('PT Sans Italic'), local('PTSans-Italic'), url('rsc/PT_Sans/PTSans-Italic.ttf') format('truetype');
+  }
+  
+  @font-face {
+    font-family: 'PT Sans';
+    font-style: normal;
+    font-weight: 700;
+    src: local('PT Sans Bold'), local('PTSans-Bold'), url('rsc/PT_Sans/PTSans-Bold.ttf') format('truetype');
+  }
+  
+  @font-face {
+    font-family: 'PT Sans';
+    font-style: italic;
+    font-weight: 700;
+    src: local('PT Sans Bold Italic'), local('PTSans-BoldItalic'), url('rsc/PT_Sans/PTSans-BoldItalic.ttf') format('truetype');
+  }
+  
+		*{
+			list-style: none;
+			text-decoration: none;
+			border-collapse: collapse;
+			margin:0px;
+			padding:0px;
+			color:#000;
+			font-family: "Raleway", sans-serif;
+			font-optical-sizing: auto;
+			font-weight: weight;
+			font-style: normal;
+            box-sizing: border-box;
+			
+		}
+
+		.intro_bg{
+			background-image: url("rsc/background-image.jpg");
+			background-size: cover;
+			background-position: center;
+			background-repeat: no-repeat;
+			width: 100%;
+			height: 1000px;
+			animation: fadeIn 2s ease-in-out;
+		}
+		.header{
+			display:flex;
+			width:1280px;
+			margin:auto;
+			
+		}
+		.nav{
+			display:flex;
+			line-height: 86px;
+			justify-content: flex-end;
+			width:calc(1280px - 300px);
+			animation: fadeIn 6s ease-in-out;
+
+			
+
+
+		}
+       .nav a {
+           color: #ffffff;
+           transition: color 0.3s;
+}
+       .nav a:hover {
+           
+           color: #000000;
+}
+
+		.nav > li{
+			margin-left:84px;
+		}
+		.nav > li > a{
+			color: #fff;
+
+		}
+		.values > li{
+			color: #fff;
+
+					
+		}
+
+		.values > .valuesimp{
+			display: flex;
+			line-height: 86px;
+			
+		}
+
+		.presentation{
+
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			margin: 0;
+			padding: 0;
+			animation: fadeIn  7s ease-in-out;
+
+	
+
+		}
+		.valuesimp > li{
+			margin-left: 5px;
+			color: #fff;
+        
+		
+		}
+        .priority{
+            margin-top: 20px;
+            max-width: 100%;
+            height: 800px;
+            background: #f1f2f3;
+    
+    
+}
+.img_assiduité{
+    background-image: url("rsc/Assiduité.jpg");
+    background-size: cover;
+    background-position: center;
+    width: 50%;
+    height: 800px;
+    animation: slideInFromLeft 1s ease-out forwards;
+}
+.img_persévérance{
+    background-image: url("rsc/persévérance.jpg");
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 800px;
+    animation: slideInFromLeft 30s ease-out forwards;
+}
+.img_harmonie{
+    background-image: url("rsc/harmonie .jpg");
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 800px;
+    animation: slideInFromLeft 50s ease-out forwards;
+    
+}
+.content_asstitude{
+    background-size: cover;
+    float: right;
+    position: relative;
+    top: -800px;
+    width: 50%;
+    height: 800px;
+    background: rgb(300, 300, 300);;
+}
+
+.border {
+    width: 440px;
+    height: 800px;
+    margin-left: 120px;
+    border-radius: 10%;
+    background: rgb(250, 250, 250);
+ 
+}
+.icons{
+    width: 50px;
+    height: 50px;
+    position: relative;
+    top: 6px;
+    left: 195px;
+    border-radius: 100%;
+    background: rgb(250, 250, 250);
+}
+.headhuman{
+    width: 15px;
+    height: 15px;
+    position: relative;
+    left: 17px;
+    top: 11px;
+    border-radius: 100%;
+    background: rgb(230, 230, 230);
+    
+}
+.body{
+    width: 40px;
+    height: 15px;
+    position:relative;
+    top: 15px;
+    left: 5px;
+    border-radius: 100%;
+    background: rgb(230, 230, 230);
+}
+.lensecamera{
+    position:relative;
+    left: 145px;
+    width: 150px;
+    height: 30px;
+    border-bottom-left-radius: 15%;
+    border-bottom-right-radius: 15%;
+    background:black;
+}
+
+.topground{
+    position: relative;
+    top: -10px;
+    width: 440px;
+    height: 100px;
+    border-top-left-radius: 15%;
+    border-top-right-radius: 15%;
+    background:rgb(230, 230, 230);
+}
+.message-bubble {
+  background: #e0e0e0; /* 밝은 회색 배경 */
+  color: #000000; /* 검은색 텍스트 */
+  padding: 20px;
+  border-radius: 25px; /* 둥근 모서리 */
+  font-family: 'Arial', sans-serif; /* Arial 폰트 사용 */
+  max-width: 500px; /* 최대 너비 */
+  margin: 20px; /* 주변 여백 */
+  position: relative; /* 꼬리를 위한 상대 위치 */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* 약간의 그림자 효과 */
+
+  
+}
+
+.message-bubble p {
+  margin: 0; /* <p> 태그의 기본 마진 제거 */
+  font-size: 16px; /* 폰트 크기 */
+  line-height: 1.5; /* 줄 간격 */
+}
+
+.message-bubble:after {
+    content: '';
+    position: absolute;
+    bottom: 0; /* 말풍선 하단에 위치 */
+    left: -30px; /* 왼쪽에서 얼마나 떨어진 곳에 꼬리가 시작될지 조정 */
+    border-width: 20px;
+    border-style: solid;
+    border-color: transparent #e0e0e0 transparent transparent; /* 왼쪽 꼬리 색상은 밝은 회색 */
+    
+}
+
+
+                
+@media screen and (max-width: 768px) {
+    .header,
+    .nav {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .nav > li {
+        margin-left: 0;
+        margin-top: 5px;
+    }
+
+
+    .header{
+        max-width: 100%;
+        margin: 0;
+    }
+
+    
+    .nav {
+        justify-content: center;
+    }
+
+    
+    .presentation {
+        justify-content: flex-end;
+        position: relative;
+    }
+    .values > li{
+        text-align: right;
+    }
+    .values > .valuesimp {
+        justify-content: flex-end;
+    }
+}
+.bottommsg{
+    background-color: rgb(230, 230, 230);
+    width: 440px;
+    height:40px;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+.messagecircle{
+    background-color: rgb(250, 250, 250);
+    width: 300px;
+    height:35px;
+    border-radius: 50px;
+    position: relative;
+    top: 5px;
+    left: 75px;
+
+  }
+  .enterommsg {
+    background-color: rgb(230, 230, 230);
+    width: 295px;
+    height: 30px;
+    border-radius: 50px;
+    position: relative;
+    top: 2px;
+    left: 3px;
+  }
+  
+  .enterommsg span {
+    position: absolute;
+    left: 10px; /* 왼쪽 끝에서 10픽셀 떨어진 위치 */
+    top: 50%; /* 상위 요소의 중앙으로 이동 */
+    transform: translateY(-50%); /* 요소의 높이의 절반만큼 위로 이동하여 수직 중앙 정렬 */
+    font-family: Arial, sans-serif; /* 폰트 스타일 */
+    color: #000000; /* 텍스트 색상 */
+  }
+  .add{
+    background-color: rgb(250, 250, 250);
+    width: 30px;
+    height: 30px;
+    border-radius: 50px;
+    position: relative;
+    top: -30px;
+    left: 30px;
+    
+  }
+  .loadadd{
+    background-image: url("rsc/add.png");
+    background-size: cover;
+    background-position: center;
+    width: 20px;
+    height: 20px;
+    position:relative;
+    left: 5px;
+    top:5px;
+  }
+  .lineshape {
+    border-width: 10px;
+    border-color: black;
+    border-style: solid;
+    width: 100px;
+    height: 100px;
+  }
+
+  .tabletarea{
+    position:relative;
+    top: 20px;
+    width: 1280px;
+    height: 1380px;
+    background-color: rgb(150, 150, 150);/* border-style, border-width, border-color를 한 줄로 정의 */
+  }
+  .languagec{
+    width: 620px;
+    height: 650px;
+    position: relative;
+    left: 15px;
+    background-image: url("rsc/C.png");
+    background-size: cover;
+    background-position: center;
+
+  }
+  .textbio > p{
+    text-align: center;
+    font-size: 18px;
+    color: black;
+    position: relative;
+    top: 540px;
+  }
+
+  .logo-link {
+    position: relative;
+    top: 540px; /* 원하는 위치로 조정 */
+    display: inline-block;
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    left: 300px;
+    text-align: center;
+    line-height: 35px;
+    font-size: 17px;
+    color: white;
+
+    background: black;
+
+    margin: 0 4px;
+
+    border: 2px solid black;
+    transition: all 0.3s ease;
+}
+
+.logo-link:hover {
+    color: black;
+    background-color: white;
+}
+
+.logo img {
+    width: 100%; /* 이미지가 .logo div 내에서 전체 너비를 차지하도록 */
+    height: auto; /* 비율을 유지하면서 높이를 자동으로 조정 */
+    border-radius: 50%;
+    position: relative;
+    top: -2px;
+ 
+ 
+}
+
+.logo-link:hover {
+    
+    color: black;
+    background-color: white;
+}
+.languagepython{
+    width: 620px;
+    height: 650px;
+    background-image: url("rsc/python.png");
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    left:645px;
+    top: -650px;
+}
+.langageocaml{
+    width: 620px;
+    height: 670px;
+    background-image: url("rsc/ocaml.png");
+    background-size: cover;
+    background-position: center;
+    left: 15px;
+    position: relative;
+    top: -640px;
+
+}
+.otherlange{
+    width: 620px;
+    height: 670px;
+    background-image: url("rsc/question.png");
+    background-size: cover;
+    position: relative;
+    left: 630px;
+    top:-115px;
+    
+}
+
+
