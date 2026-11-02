@@ -1,319 +1,381 @@
 <!doctype html>
-<html lang="fr">
-	<head>
-		
-            
-		<link rel="stylesheet" href="style/main.css">
-        <link rel="stylesheet" href="style/animation.css">
-        <link rel="stylesheet" href="style/aboutme.css">
-        <link rel="stylesheet" href="style/contactme.css">
-        <link rel="stylesheet" href="style/formation.css">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-	</head>
-    
-	<body>
-        
-		<div class="intro_bg">
-            <header class="header">
-                <nav class="animate-me">
-                    <ul class="nav">
-                        <li><a href="#presentation">HOME</a></li>
-                        <li><a href="#priority">My primary values</a></li>
-                        <li><a href="#technicalstack">My technical stack</a></li>
-                        <li><a href="#aboutme">About me</a></li>
-                        <li><a href="style/rsc/AHN Haram2.pdf">contact me</a></li>
-                    </ul>
-                </nav>
-            </header>
-        
-            <div class="presentation">
-                <div class="animate-me">
-                    <ul class="values">
+<html lang = "ko">
+  <head>
+    <meta charset = "UTF-8">
+    <meta
+      name = "viewport"
+      content = "width=device-width, initial-scale=1"
+    >
+    <title>안하람 · Game Developer</title>
+    <link
+      href = "https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&amp;family=Space+Mono:wght@400;700&amp;family=Work+Sans:wght@500;600;700;800&amp;display=swap"
+      rel = "stylesheet"
+    >
+    <script src = "https://cdn.tailwindcss.com/3.4.17"></script>
+    <link
+      rel = "stylesheet"
+      href = "styles.css"
+    >
+    <noscript>
+      <style>#intro { display: none; } #site, .reveal { opacity: 1; transform: none; }</style>
+    </noscript>
+  </head>
+  <body class = "page">
+    <!-- 프랙탈 나무 인트로 시작 -->
+    <div
+      id = "intro"
+      class = "intro-background"
+      role = "group"
+      aria-label = "자기소개 사이트 시작 화면"
+    >
+      <canvas
+        id = "tree-canvas"
+        aria-hidden = "true"
+      ></canvas>
+      <div
+        class = "intro-vignette"
+        aria-hidden = "true"
+      ></div>
+      <div
+        class = "intro-progress"
+        role = "progressbar"
+        aria-label = "프랙탈 나무 성장 진행률"
+        aria-valuemin = "0"
+        aria-valuemax = "100"
+        aria-valuenow = "0"
+      >
+        <div
+          id = "progress-fill"
+          class = "intro-progress-fill"
+        ></div>
+      </div>
+      <div class = "intro-readout">
+        <div
+          id = "progress-number"
+          aria-hidden = "true"
+        >
+     0%
+    </div>
+        <p class = "intro-caption intro-caption-text">A WORLD IS GROWING</p>
+      </div>
+    </div>
+    <!-- 프랙탈 나무 인트로 끝 -->
 
-                        <li>AHN Haram</li>
-                    
-                            <ul class="valuesimp">
-
-                                <li>Assiduité</li>
-                                <li>Persévérance</li>
-                                <li>Harmonie</li>
-
-                            </ul>
-                        
-                    </ul>
-
-                </div>
-
-            </div>
+    <!-- 소개 사이트 전체 시작 -->
+    <div
+      id = "site"
+      class = "world"
+    >
+      <div
+        class = "ambient"
+        aria-hidden = "true"
+      >
+        <svg
+          class = "vine left"
+          viewBox = "0 0 300 680"
+          fill = "none"
+        >
+          <path
+            d = "M-10 0C110 70 12 167 125 256S56 430 209 680"
+            stroke = "#63f5e4"
+            stroke-width = "3"
+          ></path>
+          <path
+            d = "M43 95C85 55 124 68 127 111C92 129 64 124 43 95ZM62 174C3 146-1 192 28 219C62 215 76 201 62 174ZM104 300C146 258 187 269 185 309C152 335 119 328 104 300ZM127 431C72 405 65 449 94 475C129 477 143 459 127 431Z"
+            fill = "#146469"
+            stroke = "#63f5e4"
+            stroke-width = "2"
+          ></path>
+        </svg>
+        <svg
+          class = "vine right"
+          viewBox = "0 0 300 680"
+          fill = "none"
+        >
+          <path
+            d = "M-10 0C110 70 12 167 125 256S56 430 209 680"
+            stroke = "#63f5e4"
+            stroke-width = "3"
+          ></path>
+          <path
+            d = "M43 95C85 55 124 68 127 111C92 129 64 124 43 95ZM62 174C3 146-1 192 28 219C62 215 76 201 62 174ZM104 300C146 258 187 269 185 309C152 335 119 328 104 300ZM127 431C72 405 65 449 94 475C129 477 143 459 127 431Z"
+            fill = "#21446e"
+            stroke = "#c3a2ff"
+            stroke-width = "2"
+          ></path>
+        </svg>
+        <span class = "spark"></span>
+        <span class = "spark"></span>
+        <span class = "spark"></span>
+        <span class = "spark"></span>
+        <span class = "spark"></span>
+      </div>
+      <!-- 상단 메뉴 시작 -->
+      <header class = "site-header w-full">
+        <div class = "max-w-6xl mx-auto px-5 sm:px-8 py-5 flex flex-wrap items-center justify-between gap-x-8 gap-y-5">
+          <a
+            href = "#top"
+            class = "flex items-center gap-3 no-underline"
+          >
+            <span
+              class = "pixel-logo"
+              aria-hidden = "true"
+            ></span>
+            <span class = "display font-bold brand">안하람</span>
+          </a>
+          <nav
+            aria-label = "주요 메뉴"
+            class = "flex flex-wrap gap-x-6 gap-y-2"
+          >
+            <a
+              href = "#skills"
+              class = "nav-link no-underline mono nav-text"
+            >01 / 기술</a>
+            <a
+              href = "#projects"
+              class = "nav-link no-underline mono nav-text"
+            >02 / 프로젝트</a>
+            <a
+              href = "#more"
+              class = "nav-link no-underline mono nav-text"
+            >03 / 더 알아보기</a>
+          </nav>
         </div>
-        
-        <div class="priority" id="priority">
+      </header>
+      <!-- 상단 메뉴 끝 -->
 
-            <div class="animate-me">
-                <div id="imageContainer">
-                    <img class="animatedImage" src="style/rsc/Assiduité.jpg" alt="Assiduité" style="width: 50%; height: 800px; display: block;">
-                    <img class="animatedImage" src="style/rsc/persévérance.jpg" alt="Persévérance" style="width: 50%; height: 800px; display: none;">
-                    <img class="animatedImage" src="style/rsc/harmonie .jpg" alt="Harmonie" style="width: 50%; height: 800px; display: none;">
-                </div>
-        
-                <div class="content_asstitude">
-
-                        <div class="border">
-                            <div class="topground">
-
-                                <div class="lensecamera"></div>
-
-                                <div class="icons">
-                                    <div class="headhuman"></div>
-                                    <div class="body"></div>
-                            </div>
-                        </div>
-
-                        <div class="animate-me">
-                            <div class="message-bubble slide-in-left">
-
-                                <p>Chacun connaît des débuts. Et je suis convaincu que, par un travail acharné et continu, il est possible d'atteindre un niveau respectable en temps voulu. Ainsi, pour moi, la Assiduité est la valeur la plus importante.</p>
-
-                            </div>
-                        
-                            <div class="message-bubble slide-in-left">
-                            
-                                <p>La persévérance est pour moi la deuxième valeur la plus importante. Parce qu'abandonner en cours de route est pire que de ne pas avoir commencé.</p>
-                        
-                            </div>
-                        
-                            <div class="message-bubble slide-in-left">
-                            
-                                <p>Dans le monde de la cuisine, l'harmonie des ingrédients est essentielle pour créer un goût parfaitement équilibré. Dès l'instant où un ingrédient domine les autres, le plat perd son essence. Ce principe est profondément ancré dans ma vision de la vie. Être un individu harmonieux et humble, trouver un équilibre avec les autres, tout comme on finit un plat délicat, c'est ce que je considère comme la valeur la plus importante à cultiver dans l'existence.</p>
-                        </div>
-
-                    </div>
-
-                    <div class="bottommsg">
-
-                        <div class="messagecircle">
-
-                            <div class="enterommsg">
-
-                                <span>Enter a message</span>
-
-                            </div>
-
-                        </div>
-
-                        <div class="add">
-
-                            <div class="loadadd">
-
-                            </div>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
+      <main
+        id = "top"
+        class = "w-full max-w-6xl mx-auto px-5 sm:px-8 pb-24"
+      >
+        <!-- 자기소개 · 메인 화면 시작 -->
+        <section
+          aria-labelledby = "hero-title"
+          class = "pt-8 sm:pt-14"
+        >
+          <div class = "hero rounded-[24px] p-7 sm:p-12 lg:p-16">
+            <div
+              class = "hero-art"
+              aria-hidden = "true"
+            >
+              <svg
+                viewBox = "0 0 300 300"
+                fill = "none"
+                shape-rendering = "crispEdges"
+              >
+                <path
+                  d = "M148 21v25h-14v15h-18v21H98v22H76v28H55v26H35v48h20v19h26v23h37v18h64v-18h35v-23h27v-19h20v-48h-20v-26h-20v-28h-22V82h-18V61h-18V46h-14V21z"
+                  fill = "#163859"
+                  stroke = "#63f5e4"
+                  stroke-width = "3"
+                ></path>
+                <path
+                  d = "M134 48h32v20h18v20h18v20h20v28h21v43h-21v22h-20v21h-22v20h-60v-20h-22v-21H97v-22H76v-43h21v-28h21V88h18V68h-2z"
+                  fill = "#222e64"
+                  stroke = "#71a9ff"
+                  stroke-width = "2"
+                ></path>
+                <path
+                  d = "M134 83h33v20h21v20h19v44h-19v20h-22v22h-32v-22h-22v-20H93v-44h19v-20h22z"
+                  fill = "#174f65"
+                  stroke = "#63f5e4"
+                  stroke-width = "3"
+                ></path>
+                <path
+                  d = "M124 135h17v17h-17zm36 0h17v17h-17z"
+                  fill = "#c3a2ff"
+                ></path>
+                <path
+                  d = "M141 170h19v12h-19z"
+                  fill = "#63f5e4"
+                ></path>
+                <path
+                  d = "M20 85h32V65h19M245 75h35m-25 15h25M15 244h48m173-5h46"
+                  stroke = "#63f5e4"
+                  stroke-width = "3"
+                  stroke-dasharray = "8 6"
+                ></path>
+              </svg>
             </div>
+            <div class = "hero-content max-w-[710px]">
+              <p class = "mono section-kicker mb-6 eyebrow">PLAYER EXPERIENCE FIRST / GAME DEVELOPMENT</p>
+              <h1
+                id = "hero-title"
+                class = "display glitch font-extrabold tracking-tight leading-tight hero-name"
+              >안하람</h1>
+              <p class = "display font-semibold mt-3 hero-role">Game Developer</p>
+              <div
+                class = "rule mt-9 mb-8"
+                aria-hidden = "true"
+              ></div>
+              <p class = "leading-relaxed break-keep max-w-[620px] hero-description">플레이어 경험을 중심으로 몰입감 있는 게임을 만드는 것을 목표로 하는 게임 개발자입니다. 논리적인 사고와 문제 해결 능력을 바탕으로 다양한 기술과 시도를 통해 완성도를 높이고 있습니다.</p>
+              <a
+                href = "#skills"
+                class = "inline-flex mt-10 px-6 py-3.5 rounded-xl font-bold no-underline transition hover:-translate-y-1 hover:shadow-[0_10px_30px_rgba(99,245,228,.3)] hero-button"
+              >세계 탐험 시작하기 →</a>
+            </div>
+          </div>
+        </section>
+        <!-- 자기소개 · 메인 화면 끝 -->
 
+        <!-- 01 기술과 도구 시작 -->
+        <section
+          id = "skills"
+          aria-labelledby = "skills-title"
+          class = "pt-20 sm:pt-28"
+        >
+          <div class = "reveal">
+            <p class = "mono section-kicker mb-3 eyebrow">01 / ABILITIES UNLOCKED</p>
+            <h2
+              id = "skills-title"
+              class = "display font-bold section-title"
+            >기술과 도구</h2>
+            <div
+              class = "rule mt-5 mb-9"
+              aria-hidden = "true"
+            ></div>
+          </div>
+          <div class = "grid lg:grid-cols-[1.3fr_.7fr] gap-5">
+            <div class = "panel rounded-2xl p-6 sm:p-8 reveal panel-background">
+              <h3 class = "display font-bold mb-6 panel-title">핵심 기술 스택</h3>
+              <div
+                class = "grid sm:grid-cols-2 gap-3"
+                id = "skill-list"
+              >
+</div>
+            </div>
+            <div class = "panel rounded-2xl p-6 sm:p-8 reveal stagger-2 panel-background">
+              <h3 class = "display font-bold mb-6 panel-title">개발 도구</h3>
+              <ul
+                class = "flex flex-wrap gap-2.5"
+                id = "tool-list"
+              >
+                </ul>
+            </div>
+          </div>
+        </section>
+        <!-- 01 기술과 도구 끝 -->
 
+        <!-- 02 프로젝트 경험 시작 -->
+        <section
+          id = "projects"
+          aria-labelledby = "projects-title"
+          class = "pt-20 sm:pt-28"
+        >
+          <div class = "reveal">
+            <p class = "mono section-kicker mb-3 eyebrow">02 / QUEST LOG</p>
+            <h2
+              id = "projects-title"
+              class = "display font-bold section-title"
+            >프로젝트 경험</h2>
+            <div
+              class = "rule mt-5 mb-9"
+              aria-hidden = "true"
+            ></div>
+          </div>
+          <div
+            class = "grid md:grid-cols-3 gap-5"
+            id = "project-list"
+          >
+            </div>
+        </section>
+        <!-- 02 프로젝트 경험 끝 -->
+
+        <!-- 03 더 알아보기 시작 -->
+        <section
+          id = "more"
+          aria-labelledby = "more-title"
+          class = "pt-20 sm:pt-28"
+        >
+          <div class = "reveal">
+            <p class = "mono section-kicker mb-3 eyebrow">03 / CHARACTER PROFILE</p>
+            <h2
+              id = "more-title"
+              class = "display font-bold section-title"
+            >더 알아보기</h2>
+            <div
+              class = "rule mt-5 mb-9"
+              aria-hidden = "true"
+            ></div>
+          </div>
+          <div
+            class = "grid md:grid-cols-3 gap-5"
+            id = "profile-list"
+          >
+            </div>
+        </section>
+        <!-- 03 더 알아보기 끝 -->
+
+      </main>
+      <!-- 하단 정보 시작 -->
+      <footer class = "w-full border-t border-cyan-100/15">
+        <div class = "max-w-6xl mx-auto px-5 sm:px-8 py-7">
+          <p class = "mono footer-text">안하람 · Game Developer</p>
         </div>
+      </footer>
+      <!-- 하단 정보 끝 -->
 
-        <div class="technicalstack" id="technicalstack">
-            
-            <div class="tabletarea">Technical Stack
-                <div class="languagec">
-                    <div class="textbio">
-                        <p>J'utilise souvent le langage C. Dans le cours de programmation impérative, j'ai obtenu le rang de 6ème dans la classe.</p>
-                        
-                        <div class="logogit">
+    </div>
+    <!-- 소개 사이트 전체 끝 -->
 
-                            <a href="https://github.com/HaramAHNparis8/C-L2" class="logo-link">
+    <!-- 기술 카드 공통 템플릿 시작 -->
+    <template id = "skill-template">
+      <a class = "game-card skill-card rounded-xl border border-cyan-200/20 p-5">
+        <span
+          class = "skill-dot"
+          aria-hidden = "true"
+        ></span>
+        <p class = "skill-title font-bold leading-snug break-keep"></p>
+      </a>
+    </template>
+    <!-- 기술 카드 공통 템플릿 끝 -->
 
-                                <div class="logo">
+    <!-- 개발 도구 공통 템플릿 시작 -->
+    <template id = "tool-template">
+      <li class = "tool-tag rounded-lg border border-cyan-200/25 px-3 py-2">
+    </template>
+    <!-- 개발 도구 공통 템플릿 끝 -->
 
-                                    <img src="style/rsc/GitHub_Invertocat_Logo.svg" alt="Logo">
+    <!-- 프로젝트 공통 템플릿 시작 -->
+    <template id = "project-template">
+      <article class = "panel panel-background game-card rounded-2xl p-6 sm:p-7 reveal">
+        <p class = "project-number mono mb-8"></p>
+        <h3 class = "display font-bold break-keep project-title"></h3>
+        <p class = "mt-4 leading-relaxed break-keep project-meta"></p>
+        <div
+          class = "h-px bg-cyan-100/20 my-6"
+          aria-hidden = "true"
+        ></div>
+        <p class = "leading-relaxed break-keep body-text"></p>
+      </article>
+    </template>
+    <!-- 프로젝트 공통 템플릿 끝 -->
 
-                                </div>
+    <!-- 학력·활동 공통 템플릿 시작 -->
+    <template id = "profile-template">
+      <article class = "panel panel-background game-card rounded-2xl p-6 reveal">
+        <h3 class = "profile-title display font-bold mb-6"></h3>
+        <ul class = "space-y-4">
+                </ul>
+      </article>
+    </template>
+    <!-- 학력·활동 공통 템플릿 끝 -->
 
-                            </a>
-
-                        </div>
-                        <p>consultez le projet</p>
-
-                    </div>
-
-                </div>
-
-                <div class="languagepython">
-
-                    <div class="textbio">
-
-                        <p>J'ai réalisé divers projets à l'école et j'ai également terminé un cours de base sur numpy.</p>
-                        
-                        
-                        <div class="logogit">
-
-                            <a href="https://github.com/HaramAHNparis8/C-L2" class="logo-link">
-
-                                <div class="logo">
-
-                                    <img src="style/rsc/GitHub_Invertocat_Logo.svg" alt="Logo">
-
-                                </div>
-
-                            </a>
-
-                        </div>
-                        <p>consultez le projet</p>
-
-                    </div>
-
-
-                </div>
-
-                <div class="langageocaml">
-
-                     <div class="textbio">
-
-                        <p>Je maîtrise non seulement les langues orientées objet, mais aussi la programmation fonctionnelle. J'ai terminé premier dans un cours pratique sur les langages de programmation fonctionnelle utilisant des monades.</p>
-                        
-                  
-                        
-                        <div class="logogit">
-
-                            <a href="https://github.com/HaramAHNparis8/C-L2" class="logo-link">
-
-                                <div class="logo">
-
-                                    <img src="style/rsc/GitHub_Invertocat_Logo.svg" alt="Logo">
-
-                                </div>
-
-                            </a>
-
-                        </div>
-
-                        <p>consultez le projet</p>
-
-                </div>
-
-                <div class="otherlange">
-                       <div class="textbio">
-
-                            <p>Je maîtrise PHP, C++, JavaScript, HTML/CSS, Godot, Prolog, SQL et Go. Si vous souhaitez voir des projets utilisant ces langages, n'hésitez pas à visiter mon site Git.</p>
-                            
-                        
-                        
-                        <div class="logogit">
-                            <a href="https://github.com/HaramAHNparis8/HaramAHNparis8" class="logo-link">
-                                <div class="logo">
-                                    <img src="style/rsc/GitHub_Invertocat_Logo.svg" alt="Logo">
-                                </div>
-                            </a>
-                        </div>
-
-                        <p>consultez le projet</p>
-
-                </div>
-
-
-
-
-                
-            
-            
-            </div>
-          
-
-        </div>
-        <!-- <div class ="formation">
-            <div class="monprojectpygodot">
-                <div class="explication">
-                    
-                </div>
-
-            </div>
-
-        </div> -->
-        
-        <div class="aboutme" id="aboutme"> 
-            
-            <p>about me</p> 
-
-            <div class="animate-me">
-
-                <div class="showtabtletarea">
-
-                    <div class="screen">
-
-                        <div class="slideshow-container">
-                            <!-- 슬라이드쇼 이미지들 -->
-                            <div class="mySlides fade">
-                              <img src="style/rsc/IMG_3363.png" style="width:100%; height: 800px; border-radius: 5%;">
-                            </div>
-                            <div class="mySlides fade">
-                              <img src="style/rsc/cuisine.png" style="width:100%;height: 800px; border-radius: 5%;">
-                            </div>
-                            <div class="mySlides fade">
-                                <img src="style/rsc/litterature.jpg" style="width:100%;height: 800px; border-radius: 5%;">
-                            </div>
-                            <div class="mySlides fade">
-                                <img src="style/rsc/literature.png" style="width:100%;height: 800px; border-radius: 5%;">
-                            </div>
-                            <div class="mySlides fade">
-                                <img src="style/rsc/IMG_6124.JPG" style="width:100%;height: 800px; border-radius: 5%;">
-                            </div>
-                            <div class="mySlides fade">
-                                <img src="style/rsc/IMG_6123.JPG" style="width:100%;height: 800px; border-radius: 5%;">
-                            </div>
-                            <div class="mySlides fade">
-                                <img src="style/rsc/IMG_6119.JPG" style="width:100%;height: 800px; border-radius: 5%;">
-                            </div>
-                            <div class="mySlides fade">
-                                <img src="style/rsc/gym.png" style="width:100%;height: 800px; border-radius: 5%;">
-                            </div>
-
-                            <div class="mySlides fade">
-                                <img src="style/rsc/IMG_5729.JPG" style="width:100%;height: 800px; border-radius: 5%;">
-                            </div>
-                            <div class="mySlides fade">
-                                <img src="style/rsc/voyage.png" style="width:100%;height: 800px; border-radius: 5%;">
-                            </div>
-                     
-                          
-                        
-
-
-
-                          </div>
-                        
-                        
-                            
-
-
-                    </div>
-                   
-
-                </div>
-
-            </div>
-            <div class=" buttom">
-
-                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-                <a class="next" onclick="plusSlides(1)">&#10095;</a>
-
-                <!-- 내비게이션 도트 -->
-                <div class="dot-container">
-                <span class="dot" onclick="showSlides(1)"></span>
-                <span class="dot" onclick="showSlides(2)"></span>
-                <!-- 추가 슬라이드를 위한 더 많은 도트 -->
-                </div>
-            
-            </div>
-
-        </div>
-        
-        <script src="script/script.js"></script>
-
-	</body>
+    <script
+      src = "content.js"
+      defer
+    ></script>
+    <script
+      src = "render.js"
+      defer
+    ></script>
+    <script
+      src = "intro.js"
+      defer
+    ></script>
+    <script
+      src = "app.js"
+      defer
+    ></script>
+  </body>
 </html>
